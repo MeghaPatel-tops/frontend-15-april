@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box-1{
+            position: static;
+            background-color: aqua;
+            text-align: center;
+             top:30px;
+             
+            
+        }
+        .nav{
+            position: sticky;
+            background-color: green;
+            text-align: center;
+             top:0px;
+             z-index: 1;
+        }
+        .box-2{
+            height: 400px;
+            background-color: brown;
+            position: relative;
+            top:30px;
+        }
+      .card-div{
+          background-color: blue;
+      }
+        .card{
+            width: 300px;
+            position: relative;
+            top: 100px;
+        }
+        .card img{
+            width: 100%;
+            position: relative;
+        }
+          .red-div{
+            background-color: red;
+            color: white;
+            position: absolute;
+            z-index: 1;
+            right:0px;
+        }
+        .fixed-div{
+            height: 300px;
+            width: 200px;
+            background-color: black;
+            color: white;
+            position: fixed;
+            top: 200px;
+            right: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="box-1">This is static example</div>
+    <div class="nav">This is navbar</div>
+    
+   <div class="box-2"></div>
+    <div class="box-1">This is static example</div>
+  <div class="card-div">
+     <div class="card">
+    <div class="red-div">8 april</div>
+        <img src="blog-img1.png" alt="">
+   </div>
+  </div>
+   <div class="fixed-div">Fiexed div</div>
+</body>
+</html>

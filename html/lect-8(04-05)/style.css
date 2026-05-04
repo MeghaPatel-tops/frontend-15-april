@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.main{
+    width: 100%;
+    height: 600px;
+    background-image: linear-gradient(rgba(0,0,0,0) , rgba(0,0,0,0.7)), url(images/back.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+nav{
+    width: 100%;
+    color: brown;
+    height: 80px;
+    padding: 0px 100px;
+    background-color: rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+}
+.logo-div label{
+     font-size: 3em;
+     font-weight: bolder;
+}
+.navbar{
+     display: flex;
+     gap: 20px;
+}
+.navbar a{
+    font-size: 1.5em;
+    text-decoration: none;
+     color: brown;
+     font-weight: bolder;
+     
+}
+.search-div input{
+    padding: 10px;
+    border: 2px solid brown;
+    border-radius: 20px;
+}
+.search-div input::placeholder{
+    color:brown
+}
+.hero-text{
+      color: brown;
+      height: 500px;
+      
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+}
+.hero-text h1{
+    font-size: 4em;
+    font-weight: bolder;
+    text-shadow: 3px 3px 3px white;
+}
+.hero-text p{
+    font-size: 1em;
+    font-weight: bolder;
+    
+}
+.hero-text button,.btn{
+    padding: 10px 20px;
+    border: 2px solid brown;
+    color: brown;
+    border-radius: 20px;
+    background-color: white;
+}
+.hero-text button:hover,.btn:hover{
+    background-color: brown;
+    color: white;
+}
+
+/* =======================About===================== */
+.about{
+    margin: 50px 0px;
+    padding: 50px 100px;
+}
+.sub-head{
+    font-size: 3em;
+    color: brown;
+    font-weight: bolder;
+    text-align: center;
+}
+.about-row{
+    margin-top: 50px;
+    color: brown;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.about-col h3{
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+.about-col p{
+    line-height: 2;
+    margin-bottom: 20px;
+    
+}
+.about-col img{
+    height: 100%;
+    width: 100%;
+}
+
+/* =====================Service========================= */
+.service{
+    margin: 50px 0px;
+    padding: 50px 100px;
+   
+}
+.service-row{
+    margin-top: 50px;
+     display: grid;
+     gap: 20px;
+    grid-template-columns: repeat(3,1fr);
+}
+.card{
+    text-align: center;
+    color: brown;
+    border-radius: 20px;
+    box-shadow: 3px 3px 3px 3px brown;
+    padding: 20px;
+}
+
+.card-img img{
+     height: 200px;
+     width: 200px;
+     border-radius: 50%;
+     margin: 0px auto;
+     display: block;
+}

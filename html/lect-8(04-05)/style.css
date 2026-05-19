@@ -137,3 +137,61 @@ nav{
      margin: 0px auto;
      display: block;
 }
+/* ============================Footer========================= */
+.footer{
+    background-color: brown;
+    color: white;
+    padding: 50px 100px;
+    display: grid;
+    grid-template-columns:repeat(3,1fr);
+    gap: 50px;
+}
+.pets-info{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.info-flex{
+    display: flex;
+    gap: 10px;
+}
+.info-map iframe{
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+}
+.info-form{
+    padding: 20px 50px;
+    border: 5px solid white;
+    border-radius: 10px;
+     width: 100%;
+    
+}
+.form-group{
+    padding: 10px 0px;
+   
+}
+.form-group input,textarea{
+    border: none;
+    border-bottom: 2px solid white;
+    background-color: transparent;
+    padding: 10px 10px;
+   
+    width: 100%;
+}
+.form-group input::placeholder,textarea::placeholder{
+    color: white;
+}
+.form-group input:focus,textarea:focus{
+    color: black;
+    background-color: white;
+    outline: none;
+}
+.btn1{
+    background-color: white;
+    color: brown;
+    padding: 10px 10px;
+    border-radius: 10px;
+    width: 100%;
+    border: none;
+}

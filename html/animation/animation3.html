@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            padding: 200px 100px;
+            display: flex;
+            gap:100px;
+            justify-content: center;
+            align-items: center;
+        }
+        .box{
+            height: 300px;
+            width: 300px;
+            border-radius: 50%;
+           border:10px solid black;
+           animation: makeCircle;
+            animation-delay: 1s;
+            animation-duration: 2s;
+            animation-timing-function: ease;
+            animation-iteration-count: 3;
+        }
+         .inner{
+            height: 100px;
+            width: 100px;
+             border-radius: 50%;
+            background-color: red;
+            animation: divMove;
+            animation-delay: 3s;
+            animation-duration: 2s;
+            animation-timing-function: ease;
+            animation-iteration-count: 3;
+        }
+
+        @keyframes makeCircle {
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+        @keyframes divMove {
+            0%{
+                transform: translate(0px ,0px);
+            }
+            25%{
+                transform: translate(200px,0px);
+            }
+            50%{
+                transform: translate(200px ,200px);
+            }
+            75%{
+                transform: translate(0px ,200px);
+            }
+            100%{
+                transform: translate(0px,0px);
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="box" id="box-1">
+        <div class="inner"></div>
+    </div>
+   
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="themeChanger('dark')">Dark</button>
+    <button onclick="themeChanger('light')">Light</button>
+    <div id="main">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ratione omnis, expedita earum dolore dicta doloribus, libero voluptates commodi ut molestiae quae? Veritatis ullam perspiciatis dicta eum, in laborum beatae.</p>
+    </div>
+
+    <script>
+        function themeChanger(theme){
+            let divId = document.getElementById('main');
+            if(theme=='dark'){
+                divId.style.backgroundColor="black";
+                divId.style.color="white"
+            }
+            else if(theme == 'light'){
+                divId.style.backgroundColor="white";
+                divId.style.color="black"
+            }
+            else{
+                 divId.style.backgroundColor="white";
+                divId.style.color="black"
+            }
+        }
+    </script>
+</body>
+</html>

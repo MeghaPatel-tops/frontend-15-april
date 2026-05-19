@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      
+        .box{
+            
+            background-image: url('../lect-8\(04-05\)/images/bac.jpeg');
+            height: 300px;
+            width: 300px;
+            border-radius: 50%;
+           border:10px solid black;
+           animation: makeCircle;
+            animation-delay: 1s;
+            animation-duration: 2s;
+            animation-timing-function: ease;
+            animation-fill-mode: forwards;
+        }
+      
+
+        @keyframes makeCircle {
+            0%{
+                transform:  translate(-300px, -10px) rotate(0deg);
+            }
+            100%{
+                transform:translate(300px, 0px) rotate(360deg) ;
+            }
+        }
+       
+        
+    </style>
+</head>
+<body>
+    <div class="box" id="box-1">
+        
+    </div>
+   
+</body>
+</html>

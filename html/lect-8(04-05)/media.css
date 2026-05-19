@@ -23,7 +23,11 @@
     .service{
         padding: 50px 30px;
     }
-     .service-row{
+    .service-row{
         grid-template-columns: 1fr;
-     }
+    }
+    .footer{
+    padding: 50px 30px;
+    grid-template-columns:1fr;
+}
 }

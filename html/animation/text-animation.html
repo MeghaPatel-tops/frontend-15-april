@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      
+        .box{
+        
+           border:10px solid black;
+           padding: 50px 100px;
+        }
+        .box p{
+            animation: textMove;
+            animation-delay: 1s;
+            animation-duration: 2s;
+            animation-timing-function: ease;
+            animation-fill-mode: forwards;
+        }
+      
+
+        @keyframes textMove {
+            0%{
+                transform:  translate(0px, 0px) ;
+            }
+            100%{
+                transform:translate(0%, -30px)  ;
+            }
+        }
+       
+        
+    </style>
+</head>
+<body>
+    <div class="box" id="box-1">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident commodi eligendi nulla sunt impedit, animi exercitationem autem labore, inventore pariatur mollitia. Maxime iusto accusantium quod, cum magni quam corrupti nesciunt.
+        </p>
+    </div>
+   
+</body>
+</html>

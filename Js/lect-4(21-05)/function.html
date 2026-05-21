@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //function with parameter
+        function add(x,y){
+            let a=x+y;
+            console.log('addition=',a);
+            
+        }
+        add(12,90);
+        //function with default value
+        function mul(x,y,z=1){
+            let m = x*y*z;
+            console.log(m);
+            
+        }
+        mul(2,3,4);
+        mul(5,6)
+
+        //function returing value
+        function square(num){
+            return num*num;
+        }
+
+        console.log(square(12));
+
+        //function called itsself
+        function factFind(num){//5//4//3//2//1
+            if(num == 1){
+                 return 1;
+            }
+            let f= num * factFind(num-1)
+            return f;
+        }
+
+        console.log(factFind(5));
+
+        //local varible and outer
+
+        let x=100;
+        function test(){
+
+
+            let y=900;
+            console.log(x);
+            console.log(y);
+            if(y==900){
+                var msg="done"
+            }
+            console.log(msg);
+            
+            
+            
+        }
+
+        test();
+       // console.log(y);
+
+       //function as expresssion
+
+       let printHello  = function(){
+           console.log('hello wolrd');
+           
+       }
+
+       console.log(printHello());
+       
+
+       function findEvenOdd(cb1,cb2){
+           let num = prompt('enter num');
+           if(num%2==0){
+               cb1(num);
+           }
+           else{
+             cb2(num)
+           }
+       }
+       function Even(num){
+           console.log('num is even');
+           
+       }
+       function Odd(num){
+           console.log('num is odd');     
+       }
+        //findEvenOdd(Even,Odd)
+        
+
+        //Arrow Function
+        let printMsg = ()=>{
+            console.log("arrow function example");
+            
+        }
+
+        printMsg()
+        let addition = (x,y)=>{
+            console.log('addition=',Number(x + y));
+            
+        }
+        addition(12,34)
+    </script>
+</body>
+</html>

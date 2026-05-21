@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="download.jpeg" alt="" id="img1">
+    <button onclick="ChangeImg('blur')">Blur</button>
+    <button onclick="ChangeImg('bright')">Brightness</button>
+    <button onclick="ChangeImg('contrast')">Contrast</button>
+
+
+    <script>
+        function ChangeImg(filtername){
+            let img = document.getElementById('img1');
+            switch(filtername){
+                case 'blur':
+                    img.style.filter='blur(2px)';
+                break;  
+                case 'bright':
+                    img.style.filter='brightness(150%)';
+                break;  
+                case 'contrast':
+                    img.style.filter='contrast(50%)';
+                break; 
+                default:
+                    console.log('invalid choice');
+                       
+            }
+        }
+    </script>
+</body>
+</html>

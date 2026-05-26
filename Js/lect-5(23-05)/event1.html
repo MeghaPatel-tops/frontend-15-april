@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="main">
+        <button id="btn">
+            click
+        </button>
+    </div>
+
+    <div id="sec">
+        <button id="button-1">btbn-1</button>
+        <button id="button-2">btbn-2</button>
+        <button id="button-3">btbn-3</button>
+        <button id="button-4">btbn-4</button>
+    </div>
+
+    <script>
+        document.getElementById('main').addEventListener('click',function(){
+               console.log('Parent div clicked');
+               
+        })
+
+       document.getElementById('btn').addEventListener('click',function(event){
+             console.log('child clicked');
+             event.stopPropagation();
+             
+       }) 
+
+       let btnArray = document.querySelectorAll('button');
+
+       console.log(btnArray);
+
+       btnArray.forEach((index,i)=>{
+           console.log(index);
+           index.addEventListener('click',(event)=>{
+                // document.getElementById('sec').removeChild(index)
+                console.log(index);
+                
+           })
+           
+       })
+       
+    </script>
+</body>
+</html>

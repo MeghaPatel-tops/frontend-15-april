@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <fieldset>
+        <p id="para1"></p>
+        <button onclick="addText()">Click</button>
+        <button onclick="genImg()">Genrate Image</button>
+
+        <div id="main">
+            <p>hjhjhjh</p>
+        </div>
+    </fieldset>
+
+
+
+    <script>
+        function addText(){
+            let text1= prompt("Enter text");
+            let p1 = document.getElementById('para1');
+            //p1.textContent=text1;
+            p1.innerHTML=text1
+        }
+        function genImg(){
+            let img1 = document.createElement('img');
+            console.log(img1);
+            
+            img1.setAttribute('src','https://images.pexels.com/photos/736230/pexels-photo-736230.jpeg');
+            img1.setAttribute('height','100px');
+            document.getElementById('main').appendChild(img1)
+        }
+    </script>
+</body>
+</html>

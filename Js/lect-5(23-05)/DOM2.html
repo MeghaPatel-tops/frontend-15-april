@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            display: flex;
+            gap: 20px;
+        }
+        .box{
+            height: 100px;
+            width: 100px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <p id="para1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint hic itaque, deserunt laboriosam optio, maxime odio vitae esse autem quo harum voluptatum veritatis sequi temporibus ratione necessitatibus pariatur corrupti sunt.</p>
+    <button onclick="changeParaStyle()">Click</button>
+
+    <hr>
+   <div class="main">
+     <div class="box" id="box-1">Box-1</div>
+    <div class="box" id="box-2">Box-2</div>
+    <div class="box" id="box-3">Box-3</div>
+    <div class="box" id="box-4">Box-4</div>
+    <div class="box" id="box-5">Box-5</div>
+   </div>
+   <button onclick="ChnageDiv()">Chnage Div</button>
+
+    <script>
+        function changeParaStyle(){
+            let p1 = document.getElementById('para1');
+            console.log(p1);
+            p1.style.color="red"
+            
+        }
+
+        function ChnageDiv(){
+            //let boxArray = document.querySelector('p');
+            let boxArray = document.querySelectorAll('.box');
+            console.log(boxArray);
+         
+        }
+    </script>
+</body>
+</html>

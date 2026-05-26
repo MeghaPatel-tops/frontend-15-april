@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .circle{
+            border-radius: 50%;
+        }
+        .square{
+            border-radius: none;
+        }
+    </style>
+</head>
+<body>
+    <img src="https://images.pexels.com/photos/736230/pexels-photo-736230.jpeg" alt="" height="200px" width="200px" id="img1">
+    <button onclick="changeShap('circle')">Make Image circle</button>
+    <button onclick="changeShap('square')">Make image Square</button>
+
+
+    <script>
+        function changeShap(shape){
+            let img1 = document.getElementById('img1');
+            console.log(img1);
+            
+            if(shape=='circle'){
+                //img1.style.borderRadius="50%"
+                img1.classList.remove('square')
+                img1.classList.add('circle')
+            }
+            else{
+                //img1.style.borderRadius="0%"
+                 img1.classList.remove('circle')
+                img1.classList.add('square')
+            }
+        }
+    </script>
+</body>
+</html>

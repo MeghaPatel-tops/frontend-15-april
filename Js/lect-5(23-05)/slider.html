@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            height: 600px;
+            width: 100%;
+            position: relative;
+        }
+        img{
+            height: 100%;
+            width: 100%;
+            display: none;
+        }
+        #img-1{
+            display: block;
+        }
+        button{
+            position: absolute;
+        }
+        #left{
+            left: 30px;
+            top: 50%;
+        }
+         #right{
+            right: 30px;
+            top: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <button id="left">Left</button>
+        <button id="right">Right</button>
+        <img src="back1.jpeg" alt="" id="img-1">
+        <img src="back2.jpeg" alt="" id="img-2">
+        <img src="back3.jpeg" alt="" id="img-3">
+    </div>
+
+    <script>
+        let counter =1;
+        document.getElementById('right').addEventListener('click',function(){
+            console.log('before',counter);
+            
+            let preImg = 'img-'+counter;
+            //alert(preImg)
+            document.getElementById(preImg).style.display="none";
+            if(counter==3){
+                counter=0;
+            }
+            counter++;
+            let curImg = 'img-'+counter;
+           // alert(curImg)
+           console.log('after',counter);
+            document.getElementById(curImg).style.display="block";
+        })
+        document.getElementById('left').addEventListener('click',function(){
+             let preImg = 'img-'+counter;
+            //alert(preImg)
+            console.log('before',counter);
+            document.getElementById(preImg).style.display="none";
+             counter--;
+               console.log('after',counter);
+            if(counter < 1){
+                counter=3
+            }
+            let curImg = 'img-'+counter;
+            document.getElementById(curImg).style.display="block";
+        })
+    </script>
+</body>
+</html>

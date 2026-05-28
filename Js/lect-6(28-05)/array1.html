@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let fruist =["apple","banana","kiwi"];
+        console.log(fruist);
+
+        let vges = new Array('potato','tomato');
+        console.log(vges);
+
+        console.log(fruist[0]);
+        console.log(fruist.at(0));
+
+        console.log(fruist[fruist.length-1]);
+        console.log(fruist.at(-1));
+
+
+        //push => add element from last
+        fruist.push('mango');
+        console.log(fruist);
+
+        //pop =>reomve at end
+        fruist.pop();
+        console.log(fruist);
+
+        //unshift add element at start
+        fruist.unshift('watermallon');
+        console.log(fruist);
+
+        //shift remove at start
+
+        fruist.shift();
+        console.log(fruist);
+
+        // delete fruist[1];
+        //  console.log(fruist);
+
+         //arr.splice(start[, deleteCount, elem1, ..., elemN])
+
+         fruist.splice(1,1);
+         console.log(fruist);
+
+         fruist.splice(1,0,"chiku")
+         console.log(fruist);
+
+         fruist.splice(1,1,'mongo');
+         console.log(fruist);
+
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </script>
+</body>
+</html>

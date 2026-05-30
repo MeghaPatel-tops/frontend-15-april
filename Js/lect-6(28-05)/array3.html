@@ -46,10 +46,9 @@
           />
         </div>
 
-        <div class="col-md-3">
-          <button class="btn btn-primary w-100" onclick="addFruit()">
-            Add Fruit
-          </button>
+        <div class="col-md-3" id="btndiv">
+         <button class="btn btn-primary w-100" onclick="addFruit()" id="addbtn">Add</button>
+          <button class="btn btn-primary w-100" onclick="updateFruit()" id="upbtn" style="display: none;">Update</button>
         </div>
       </div>
 
@@ -70,12 +69,17 @@
           </tbody>
         </table>
       </div>
-
+  
     </div>
   </div>
 
   <script>
        let fruits = [];
+       let editId=null;
+
+      
+
+      
 
        function addFruit(){
          let fname = document.getElementById('fruitName').value;
@@ -87,6 +91,8 @@
        }
 
        function fruitShow(){
+           document.getElementById('addbtn').style.display="block";
+          document.getElementById('upbtn').style.display="none";
            let str="";
            for(let i=0;i<fruits.length;i++){
                str+= `
@@ -97,7 +103,9 @@
                 class="btn btn-danger btn-sm"
                 onclick="delFruits(${i})" >
                 Delete
-              </button></td>
+              </button>
+               <button onclick="editFruits(${i})">Edit</button>
+              </td>
             </tr>`
            }
            document.getElementById('fruitTableBody').innerHTML=str;
@@ -107,6 +115,22 @@
            //alert(id);
           fruits.splice(id,1);
            fruitShow();
+       }
+
+       function editFruits(id){
+          //alert(id)
+          document.getElementById('fruitName').value = fruits[id];
+          editId=id
+          document.getElementById('addbtn').style.display="none";
+          document.getElementById('upbtn').style.display="block";
+       }
+       function updateFruit(){
+          // alert(editId);
+           let newFname=document.getElementById('fruitName').value;
+           fruits.splice(editId,1,newFname);
+           fruitShow();
+           document.getElementById('fruitName').value="";
+           editId=null;
        }
 
        window.onload = fruitShow();

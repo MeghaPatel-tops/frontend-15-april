@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let salary = [10000,10009,11000,20000,30000,12000];
+         let newArray = salary.map((index,i)=>{
+              index = index + (index*0.1);
+              return index
+         })
+
+         let totalSalary = salary.reduce((sum,index,i)=>{
+               sum= sum+index
+               return sum
+         },0)
+         console.log("total salary",totalSalary);
+         
+
+         console.log(newArray);
+
+         console.log([1,2,11,22,3,44,5].sort(compare));
+         function compare(a, b) {
+            if (a > b) return 1; // if the first value is greater than the second
+            if (a == b) return 0; // if values are equal
+            if (a < b) return -1; // if the first value is less than the second
+            }
+
+            let hobby = ['sport','music','dance'];
+            let hstr = hobby.join('-');
+            console.log(hstr);
+
+            let harr = hstr.split("-");
+            console.log(harr);
+            
+            
+    </script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let user = {};
+        user.name = "abc";
+        user.email="abc@gmail.com";
+        user['city']="surat"
+
+        delete user.city;
+        console.log(user);
+
+        for(key in user){
+            console.log(key);
+            console.log(user[key]);
+            
+            
+        }
+
+        let fruit = {fname:'apple',price:200};
+
+        let fobj = fruit;
+
+        fobj.qty=2;
+
+        console.log(fruit);
+
+        let clone = {};
+
+        // for(key in fruit){
+        //     clone[key]= fruit[key]
+        // }
+        Object.assign(clone,fruit)
+
+      
+        
+
+        
+
+        console.log(clone);
+        clone.isAvail = true;
+        console.log("upclone",clone);
+
+        console.log(fruit);
+        
+        
+          Object.assign(user,{isAdmin:true})
+
+        console.log(user);
+
+        const product = {
+            pname:"laptop"
+        }
+
+        product.pname="keybord";
+
+        console.log(product);
+        
+        
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="addName()">Add Name</button>
+    <script>
+        let fruits = ['apple','banana','kiwi','mongo','watermallon'];
+
+        let [f1,f2,...rest]= fruits;
+
+        console.log(f2);
+        console.log(rest[1]);
+        
+
+        function addName(){
+            let fullname = prompt(' enetr firstname middlename surname');
+            let [fname,mname,sname]=fullname.split(" ");
+            console.log(fname);
+            console.log(sname);
+            
+            
+        }
+        
+    </script>
+</body>
+</html>

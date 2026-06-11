@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class TestClass{
+            static counter;
+            constructor(){
+               TestClass.counter++;
+            }
+            static saticMethod(){
+                console.log('static method called')
+                console.log('counter=',TestClass.counter);
+                
+            }
+        }
+        TestClass.counter=0;
+        let t1 = new TestClass();
+        let t2= new TestClass();
+
+        TestClass.saticMethod();
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        function add(x,y,...rest){
+            let s = x+y;
+            for(let i =0;i<rest.length;i++){
+                s+= rest[i];
+            }
+            return s;
+        }
+
+        console.log(add(1,2,3,4));
+
+        console.log(add(1,2,3,4,5,6,7,8,9,0));
+
+        function greetValue(){
+            for(i=0;i<arguments.length;i++){
+                console.log(arguments[i]);
+                
+            }
+        }
+
+        greetValue('hi','hello','bybyby')
+
+
+        let numArray = [1,4,6,8,2,66];
+
+        console.log(Math.max(...numArray));
+
+        let newArray =[100,200,...numArray,500];
+        console.log(newArray);
+        
+        
+        
+        
+    </script>
+</body>
+</html>

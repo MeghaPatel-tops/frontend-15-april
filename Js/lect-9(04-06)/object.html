@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        let user = {
+            name:'megha',
+            email:'m@gmail.com',
+            PrintUser:function(){
+            console.log(`Welocme :${this.name}`);
+            
+        }
+
+        }
+
+        user.PrintUser();
+
+        function Product(pname,price){
+             this.pname=pname;
+             this.price = price
+
+             this.printProduct=function(){
+                  console.log(this.pname);
+             }
+        }
+
+        let p1 = new Product('laptop','21000');
+       p1.printProduct();
+
+       let p2 = new Product('mouse','200');
+       p2.printProduct();
+        
+        
+
+       
+       
+
+    </script>
+</body>
+</html>

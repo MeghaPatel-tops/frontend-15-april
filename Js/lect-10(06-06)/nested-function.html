@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        function outerFunction()
+        {
+            let count=100;
+            return function innerFunction(){
+               
+                console.log(count);     
+            }
+                 
+        }
+
+       let inFun =  outerFunction();
+      // console.log(inFun);
+      inFun();
+
+
+      function test(){
+        let m=20;
+           if(true){
+              let m=100;
+           }
+           console.log(m);
+           
+      }
+      test()
+
+      console.log(this);
+      
+       
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let user = {
+            uname:"Abc",
+            email:'abc@gmail.com',
+            conatct:90909090909,
+        }
+
+        function printUser(role){
+            console.log(this.uname);
+            console.log(this.email);
+            console.log(this.conatct);
+            console.log(role);
+            
+        }
+
+        printUser.call(user,"users-role");
+
+        printUser.apply(user,['user-role']);
+
+        let newFun = printUser.bind(user,"user-role");
+        console.log(newFun);
+        newFun();
+        
+
+
+
+    </script>
+</body>
+</html>

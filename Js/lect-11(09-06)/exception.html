@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="checkAuth()">click</button>
+    <script>
+        function test(){
+            try {
+                console.log(m);
+            
+            } catch (error) {
+                console.log(error);
+                
+            }
+            finally{
+                console.log("all task done");
+                
+            }
+        }
+        test();
+        console.log("script load after error");
+
+        class AuthChecker extends Error{
+             constructor(message){
+                 super(message);
+                 this.name = "Authentication Failed";
+             }
+        }
+
+        function checkAuth(){
+           try {
+             let userrole = prompt("Enter your role");
+                if(userrole!='admin'){
+                    throw new AuthChecker("Invalid user");
+                }
+           } catch (error) {
+               console.log(error);
+               
+                console.log(error.message);
+                console.log(error.name);
+                
+                
+           }
+        }
+        
+    </script>
+</body>
+</html>

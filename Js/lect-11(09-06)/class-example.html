@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        class Product{
+              #privateData = "testdata"
+            constructor(pname,price,desc,amt){
+                this._protectedData=amt;
+                this.pname=pname;
+                this.price=price;
+                this.desc=desc;
+            }
+            get protectedData() {
+                return this._protectedData;
+            }
+
+             printProduct(){
+                console.log(`${this.pname} - ${this.price} - ${this.desc}`);
+                
+            }
+        }
+
+        let p1 = new Product("laptop",200000,"Dell",200);
+        p1.printProduct();
+        
+        
+        p1.protectedData=4040;
+        console.log(p1.protectedData);
+        //p1.#privateData;
+        
+        
+    </script>
+</body>
+</html>

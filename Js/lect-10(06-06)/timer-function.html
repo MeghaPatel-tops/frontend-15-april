@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main" id="main">
+            <h2 id="load">Loading.....</h2>
+           
+    </div>
+     <p id="timer"></p>
+
+
+    <script>
+        let counter = 0;
+        function printMsg(){
+            document.getElementById('main').innerHTML=` <h1>Welocme to app</h1>`;
+            document.getElementById('load').style.display="none"
+        }
+
+        function printTimer(){
+            counter ++ ;
+            let str = `<h3>Couter=${counter}`;
+            document.getElementById('timer').innerHTML=  str; 
+        }
+        setTimeout(printMsg,2000)
+        setInterval(printTimer,1000)
+
+    </script>
+</body>
+</html>

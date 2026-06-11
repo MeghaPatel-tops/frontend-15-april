@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        class Account{
+            constructor(holder,accno,initBal){
+                this.holder=holder;
+                this.accno=accno;
+                this.initBal=initBal;
+                console.log("parent class constructor");           
+            }
+            printInfo(){
+                console.log(`acc holder name=${this.holder} accno=${this.accno} balance:${this.initBal}`);
+                
+            }
+            test(){
+                console.log("parent class method");
+                
+            }
+
+        }
+        class Current extends Account{
+              constructor(iAmt,holder,accno,initbal){
+                 super(holder,accno,initbal);
+                 this.iAmt= iAmt;
+              }
+              calCIntrest(){
+                  this.initBal = this.initBal + (this.initBal * this.iAmt);
+                  console.log(`Current bal:${this.initBal}`);
+                  
+              }
+              test(){
+                super.test();
+                console.log("child class method");
+                
+            }
+        }
+
+        let c1 = new Current(0.02,"Abc",200020202020,2000);
+        c1.printInfo();
+        c1.calCIntrest();
+        c1.test();
+    </script>
+</body>
+</html>

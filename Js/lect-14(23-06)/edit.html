@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+
+                <div class="card shadow">
+                    <div class="card-header text-center">
+                        <h3>User Registration</h3>
+                    </div>
+
+                    <div class="card-body">
+                        <form method="post" id="frm1">
+
+                            <!-- Username -->
+                            <div class="mb-3" id="userDiv">
+                                <label class="form-label">Username</label>
+                                <input
+                                    id="username"
+                                    type="text"
+                                    class="form-control"
+                                    placeholder="Enter username"
+                                >
+                            </div>
+
+                            <!-- Email -->
+                            <div class="mb-3" id="EmailDiv">
+                                <label class="form-label">Email</label>
+                                <input
+                                id="email"
+                                    type="text"
+                                    class="form-control"
+                                    placeholder="Enter email"
+                                >
+                            </div>
+
+                            <!-- Password -->
+                            <div class="mb-3" id="pwdDiv">
+                                <label class="form-label">Password</label>
+                                <input
+                                id="pwd"
+                                    type="password"
+                                    class="form-control"
+                                    placeholder="Enter password"
+                                >
+                                <div id="passwordErr" style="color: red ;display: none;">
+                                    <p id="pwdE-1">A-Z a-z</p>
+                                  
+                                    <p id="pwdE-3">0-9</p>
+                                    <p id="pwdE-4">Special Char</p>
+                                    <p id="pwdE-5">Max len > 8</p>
+                                </div>
+                            </div>
+
+                            <!-- Contact -->
+                            <div class="mb-3" id="telDiv">
+                                <label class="form-label">Contact Number</label>
+                                <input
+                                id="tel"
+                                    type="tel"
+                                    class="form-control"
+                                    placeholder="Enter contact number"
+                                >
+                            </div>
+
+                            <!-- Submit Button -->
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-primary">
+                                    Update
+                                </button>
+                            </div>
+
+                        </form>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+
+        let uid = urlParams.get('uid');
+        function getUserById(){
+            
+       
+              let userData = localStorage.getItem('f-user');
+              let singleUser = null;
+            if(userData){
+                userData = JSON.parse(userData);
+                singleUser= userData[uid];
+                console.log(singleUser);
+               document.getElementById('username').value=singleUser.username;
+             document.getElementById('email').value=singleUser.email;;
+             document.getElementById('pwd').value=singleUser.pwd;
+            document.getElementById('tel').value=singleUser.tel;
+            }
+        }
+        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        const pwdRegex=/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,20}$/
+
+      
+
+        document.getElementById('frm1').addEventListener('submit',(event)=>{
+            event.preventDefault();
+            let username = document.getElementById('username');
+            let email = document.getElementById('email');
+            let pwd = document.getElementById('pwd');
+            let tel = document.getElementById('tel')
+            console.log("pwd",pwd);
+            
+            if(username.value == ""){
+                let p1=document.createElement('p');
+                p1.textContent="Username Required";
+                p1.style.color="red";
+                document.getElementById('userDiv').appendChild(p1)
+                username.focus();
+                return false;
+            }
+             if(email.value == ""  ||  !emailRegex.test(email.value)){
+                let p1=document.createElement('p');
+                p1.textContent="Email Required Ex:abc@example.com";
+                p1.style.color="red";
+                document.getElementById('EmailDiv').appendChild(p1)
+                email.focus();
+                return false;
+            }
+            if(!pwdRegex.test(pwd.value)){
+                let p1=document.createElement('p');
+                p1.textContent="Enter Valid Password";
+                p1.style.color="red";
+                document.getElementById('pwdDiv').appendChild(p1)
+                pwd.focus();
+                return false;
+            }
+            if(!/^.{10,10}$/.test(tel.value)){
+                let p1=document.createElement('p');
+                p1.textContent="Enter Valid Contact";
+                p1.style.color="red";
+                document.getElementById('telDiv').appendChild(p1)
+                tel.focus();
+                return false;
+            }
+            
+            
+            let user = {
+                'username':username.value,
+                'email':email.value,
+                'pwd':pwd.value,
+                'tel':tel.value
+            }
+            if(localStorage.getItem('f-user')){
+                let oldArray = JSON.parse(localStorage.getItem('f-user'));
+                oldArray.splice(uid,1,user)
+                console.log(oldArray);
+                
+                localStorage.setItem('f-user',JSON.stringify(oldArray));
+                window.location="userdata.html"
+            }
+           
+        })
+
+        window.onload= getUserById;
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let pro1={
+            name:'laptop',
+            price:200000,
+            desc:'Dell'
+        }
+
+        let p1={};
+        console.log(p1);
+        
+        for(key in pro1){
+            p1[key]=pro1[key]
+        }
+
+        console.log(p1);
+        p1.name="LED"
+        console.log(pro1.name)
+
+        let p2 = {};
+        Object.assign(p2,pro1);
+        console.log(p2);
+        
+        
+    </script>
+</body>
+</html>

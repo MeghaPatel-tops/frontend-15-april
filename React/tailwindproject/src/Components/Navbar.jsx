@@ -2,7 +2,7 @@ import React from 'react'
 
 function Navbar() {
   return (
-      <div className="flex sticky top-0 justify-between bg-gray-900 px-20 py-10 text-white">
+      <div className="flex sticky top-0 justify-between bg-gray-800 px-20 py-10 text-white">
             <div>
                 <label htmlFor="" className='text-2xl'>MyProfile</label>
             </div>

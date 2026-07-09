@@ -5,7 +5,7 @@ import person from '../assets/download.jpeg'
 function Hero() {
   return (
      <div id="hero" >
-        <div className="bg-[url('https://t3.ftcdn.net/jpg/08/18/50/68/360_F_818506831_lUyjzfPizmTZp9EZgwxgmFCQYuwPU4KK.jpg')]  bg-no-repeat bg-cover">
+        <div className="bg-[url('http://localhost:5173/src/assets/bg1.jpg')]  bg-no-repeat bg-cover">
       <div className="grid p-20 grid-cols-2">
 
         <div className="col">

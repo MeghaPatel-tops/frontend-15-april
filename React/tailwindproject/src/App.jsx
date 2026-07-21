@@ -10,6 +10,7 @@ import Fruits from './Components/Fruits'
 import Product from './Components/Product'
 import User from './Components/User'
 import Userdata from './Components/Userdata'
+import FormExample from './Components/FormExample'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -23,6 +24,7 @@ function App() {
        {/* <Product/> */}
        {/* <User/> */}
        <Userdata/>
+       {/* <FormExample/> */}
     </>
   )
 }

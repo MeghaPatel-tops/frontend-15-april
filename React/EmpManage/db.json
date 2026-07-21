@@ -1,0 +1,74 @@
+{
+  "employee": [
+    {
+      "id": "bb6b",
+      "EmployeeName": "Gopal",
+      "Designation": "Java Developer",
+      "Experience": "1",
+      "Education": "Bachelor s Degree"
+    },
+    {
+      "id": "f011",
+      "EmployeeName": "Naitik",
+      "Designation": "Full stack developer"
+    },
+    {
+      "id": "4f5c",
+      "EmployeeName": "Dev",
+      "Designation": "Python developer",
+      "Experience": "1",
+      "Education": "Bachelor s Degree"
+    },
+    {
+      "id": "0baa",
+      "EmployeeName": "Vinod",
+      "Designation": "Java Developer",
+      "Experience": "2",
+      "Education": "High School"
+    },
+    {
+      "id": "bafc",
+      "EmployeeName": "Keval",
+      "Designation": "python developer",
+      "Experience": "1",
+      "Education": "Diploma"
+    },
+    {
+      "id": "a218",
+      "EmployeeName": "Uday",
+      "Designation": "python developer",
+      "Experience": "1",
+      "Education": "Diploma"
+    },
+    {
+      "id": "e531",
+      "EmployeeName": "aa",
+      "Designation": "aaa",
+      "Experience": "1",
+      "Education": "Bachelor s Degree"
+    },
+    {
+      "id": "d44e",
+      "EmployeeName": "ass",
+      "Designation": "ssss",
+      "Experience": "1",
+      "Education": "High School"
+    },
+    {
+      "id": "21b5",
+      "EmployeeName": "Naitik"
+    },
+    {
+      "id": "2531"
+    },
+    {
+      "id": "fbc6"
+    },
+    {
+      "id": "fb36"
+    },
+    {
+      "id": "98e1"
+    }
+  ]
+}

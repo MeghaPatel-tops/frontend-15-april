@@ -1,12 +1,6 @@
 {
   "products": [
     {
-      "id": "7naTgfKmdu4",
-      "pname": "Dress punjabi123",
-      "price": 1500,
-      "desc": "sdsdsdsd"
-    },
-    {
       "pname": "Keyboard tvs",
       "price": 1500,
       "desc": "xfcxvcxvxc",
@@ -17,6 +11,24 @@
       "price": 22.3,
       "desc": "jkhkjhjkhjkh",
       "id": "Eth_xXnfqw8"
+    },
+    {
+      "pname": "Dress punjabi222",
+      "price": "1230",
+      "desc": "cxcxcvc",
+      "id": "Qf-9stOmCWI"
+    },
+    {
+      "pname": "Keyboard tvs",
+      "price": "120",
+      "desc": "test product",
+      "id": "v3XYc4mSxpI"
+    },
+    {
+      "pname": "apple",
+      "price": "1230",
+      "desc": "cxcnm,cn",
+      "id": "vVTMCDHo-CE"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
